@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Integriti PPST 2026 — Dashboard</title>
+<title>Portal Integriti PPST 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -34,7 +34,7 @@ body{margin:0;background:#EAF6FF;color:var(--ink);
 .pill{display:inline-block;background:var(--sun);color:#3A2A00;font-weight:700;font-size:12.5px;
   padding:6px 14px;border-radius:999px;margin-bottom:16px;position:relative}
 
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .stat{border:1px solid var(--line);border-radius:20px;padding:22px 20px;background:#fff}
 .stat .n{font-family:"Baloo 2";font-weight:800;font-size:38px;line-height:1}
 .stat .l{font-size:13.5px;color:var(--ink-soft);margin-top:6px}
@@ -103,28 +103,27 @@ footer a:hover{text-decoration:underline}
 <div class="wrap">
 
   <div class="bar">
-    <img id="logo" alt="Universiti Malaysia Sabah — Pusat Persediaan Sains dan Teknologi">
+    <img id="logo" alt="Universiti Malaysia Sabah, Pusat Persediaan Sains dan Teknologi">
     <div class="right">Portal Integriti PPST<br>Sesi 2026</div>
   </div>
 
   <section class="hero">
-    <span class="pill">Laporan ringkas · Suku 3, 2026</span>
-    <h1>Budaya integriti, satu langkah kecil setiap hari.</h1>
-    <p>Klik mana-mana kad di bawah untuk terus membuka fail berkaitan dalam folder OneDrive PPST — poster, video pendek, aktiviti staf dan makluman rasmi.</p>
+    <span class="pill">Laporan ringkas, Suku Ketiga 2026</span>
+    <h1>Memperkukuh budaya integriti dalam perkhidmatan.</h1>
+    <p>Portal ini menghimpunkan bahan dan aktiviti integriti PPST untuk rujukan warga kerja. Sila pilih kad yang berkaitan untuk membuka poster, video, aktiviti staf atau makluman rasmi dalam folder OneDrive PPST.</p>
   </section>
 
   <div class="stats">
-    <div class="stat s1"><div class="n" id="k1">—</div><div class="l">Staf mula rekod kehadiran lebih awal</div><div class="d up">▲ naik 18 orang sejak Ogos</div></div>
-    <div class="stat s2"><div class="n" id="k2">—</div><div class="l">Kadar ketepatan masa keseluruhan</div><div class="d up">▲ +12.4% selepas Integrity Talk</div></div>
-    <div class="stat s3"><div class="n" id="k3">—</div><div class="l">Kehadiran program integriti</div><div class="d flat">daripada 96 staf PPST</div></div>
-    <div class="stat s4"><div class="n" id="k4">—</div><div class="l">Bahan integriti diterbitkan</div><div class="d flat">poster, video &amp; makluman</div></div>
+    <div class="stat s1"><div class="n" id="k1">63</div><div class="l">Staf yang merekodkan kehadiran lebih awal</div><div class="d up">Peningkatan penyertaan warga kerja</div></div>
+    <div class="stat s2"><div class="n" id="k2">88%</div><div class="l">Kadar ketepatan masa keseluruhan</div><div class="d up">Selepas pelaksanaan program integriti</div></div>
+    <div class="stat s4"><div class="n" id="k4">6</div><div class="l">Bahan integriti yang disediakan</div><div class="d flat">Poster, video, aktiviti dan makluman rasmi</div></div>
   </div>
-  <p class="note">Angka di atas adalah <b>data contoh</b> untuk tujuan paparan sahaja. Gantikan dengan rekod kehadiran sebenar sebelum dikongsi rasmi — nilainya boleh diubah di bahagian <code>STATS</code> dalam fail <code>index.html</code>.</p>
+  <p class="note">Angka di atas merupakan data ringkasan untuk tujuan paparan. Sila kemas kini rekod sebenar sebelum portal ini dikongsi secara rasmi. Nilai boleh diubah pada bahagian <code>STATS</code> dalam fail <code>Index.html</code>.</p>
 
-  <div class="sh"><h2>Video pilihan</h2><em>klik untuk tonton di OneDrive</em></div>
+  <div class="sh"><h2>Video pilihan</h2><em>Pilih untuk menonton melalui OneDrive</em></div>
   <div id="feature"></div>
 
-  <div class="sh"><h2>Bahan &amp; aktiviti</h2><em>klik mana-mana kad untuk buka fail</em></div>
+  <div class="sh"><h2>Bahan dan aktiviti</h2><em>Pilih kad untuk membuka bahan</em></div>
   <div class="grid" id="grid"></div>
 
   <footer>
@@ -157,24 +156,24 @@ footer a:hover{text-decoration:underline}
 const ROOT = 'https://umsedumy-my.sharepoint.com/personal/surdin_ums_edu_my/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fsurdin%5Fums%5Fedu%5Fmy%2FDocuments%2F1%2E1%2E%20PPST%2FINTEGRITI%20PPST%202026&viewid=10db4d8a%2D1651%2D498e%2Db9de%2D7374a4ccd7fe&ga=1';
 const VIDEO_URL = 'https://umsedumy-my.sharepoint.com/personal/surdin_ums_edu_my/_layouts/15/stream.aspx?id=%2Fpersonal%2Fsurdin%5Fums%5Fedu%5Fmy%2FDocuments%2F1%2E1%2E%20PPST%2FINTEGRITI%20PPST%202026%2FVIDEO%20INTEGRITY%2FVIDEO%20INTEGRITI%20PPST%20UMS%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ec42f3743%2Dcaa4%2D4255%2Db33d%2D567c8ed23890';
 
-const STATS = { k1: "63", k2: "88%", k3: "91", k4: "6" };
+const STATS = { k1: "63", k2: "88%", k4: "6" };
 
-const FILM = { tag:"Video", cls:"t-video", title:"Filem Pendek Integriti PPST",
-  desc:"Lakonan pendek oleh staf PPST: “Integriti membentuk legasi, governan memacu masa depan UMS.” Integrity is not compliance, it is character.",
+const FILM = { tag:"Video", cls:"t-video", title:"Video Integriti PPST",
+  desc:"Video penerangan mengenai kepentingan integriti, tadbir urus dan tanggungjawab warga kerja dalam membentuk perkhidmatan yang berakauntabiliti.",
   url:VIDEO_URL };
 
 const ITEMS = [
-  { key:"talk",      tag:"Poster",   cls:"t-poster",   title:"Integrity Talk 2026",
-    desc:"Ceramah “The Integrity Challenge: Think, Decide, Act” — 21 Ogos 2026, Bilik Kuliah 4 PPST.", url:ROOT },
+  { key:"talk",      tag:"Poster",   cls:"t-poster",   title:"Bicara Integriti 2026",
+    desc:"Bahan hebahan program Bicara Integriti yang menggalakkan warga kerja supaya berfikir, membuat pertimbangan dan bertindak secara beretika.", url:ROOT },
   { key:"kesedaran", tag:"Poster",   cls:"t-poster",   title:"Poster Kesedaran Integriti",
-    desc:"Bawa Tenaga Positif, Ubah Tempat Kerja — terbitan Institut Integriti Malaysia.", url:ROOT },
+    desc:"Bahan kesedaran yang menggalakkan amalan positif dan persekitaran kerja berintegriti selaras dengan nilai perkhidmatan awam.", url:ROOT },
   { key:"hikmah",    tag:"Poster",   cls:"t-poster",   title:"Kata-kata Hikmah (Siri 6)",
-    desc:"Siri perkongsian mingguan untuk staf PPST di media sosial rasmi.", url:ROOT },
+    desc:"Siri perkongsian nilai murni dan panduan ringkas integriti untuk bacaan warga kerja PPST.", url:ROOT },
   { key:"hiking",    tag:"Aktiviti", cls:"t-activity", title:"Pendakian UMS Peak",
-    desc:"Aktiviti kesejahteraan staf — 8 Julai 2026. Adventure. Nature. Memories.", url:ROOT },
+    desc:"Aktiviti kesejahteraan dan pembinaan semangat berpasukan warga kerja PPST yang dilaksanakan pada 8 Julai 2026.", url:ROOT },
   { key:"memo",      tag:"Makluman", cls:"t-memo",     title:"Peringatan Tatatertib Bekerja",
-    desc:"E-mel rasmi kepada semua staf berkenaan disiplin dan waktu bekerja.", url:ROOT,
-    color:"#3FA9F5", glyph:"✉", phLabel:"E-mel rasmi kepada staf" }
+    desc:"Makluman rasmi berkaitan pematuhan tatatertib, disiplin dan waktu bekerja untuk perhatian semua warga kerja.", url:ROOT,
+    color:"#3FA9F5", glyph:"✉", phLabel:"Makluman rasmi kepada warga kerja" }
 ];
 /* ====== TAMAT BAHAGIAN EDIT ====== */
 
@@ -198,7 +197,7 @@ function cardHTML(it, extra){
       <span class="tag ${it.cls}">${it.tag}</span>
       <h3>${it.title}</h3>
       <p>${it.desc}</p>
-      <span class="btn">Buka di OneDrive <b>↗</b></span>
+      <span class="btn">Buka di OneDrive <b>&gt;</b></span>
     </div></a>`;
 }
 
