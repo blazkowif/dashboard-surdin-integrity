@@ -34,12 +34,12 @@ body{margin:0;background:#EAF6FF;color:var(--ink);
 .pill{display:inline-block;background:var(--sun);color:#3A2A00;font-weight:700;font-size:12.5px;
   padding:6px 14px;border-radius:999px;margin-bottom:16px;position:relative}
 
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.stats{display:grid;grid-template-columns:1fr;gap:16px}
 .stat{border:1px solid var(--line);border-radius:20px;padding:22px 20px;background:#fff}
 .stat .n{font-family:"Baloo 2";font-weight:800;font-size:38px;line-height:1}
 .stat .l{font-size:13.5px;color:var(--ink-soft);margin-top:6px}
 .stat .d{font-size:12.5px;font-weight:700;margin-top:10px}
-.s1 .n{color:var(--mint)} .s2 .n{color:var(--grape)} .s3 .n{color:var(--sky)} .s4 .n{color:var(--coral)}
+.s4 .n{color:var(--mint)}
 .up{color:var(--mint)} .flat{color:var(--ink-soft)}
 .note{font-size:12.5px;color:var(--ink-soft);margin:14px 0 46px}
 
@@ -93,7 +93,7 @@ footer a{color:var(--grape);font-weight:700;text-decoration:none}
 footer a:hover{text-decoration:underline}
 .fine{border-top:1px solid var(--line);padding-top:16px;font-size:12.5px;display:flex;gap:14px;flex-wrap:wrap}
 
-@media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:repeat(2,1fr)}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}
   .feature{grid-template-columns:1fr}.feature .body{padding:22px}.hero{padding:32px 26px}.fcols{grid-template-columns:1fr}}
 @media(max-width:620px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.card{transition:none}}
@@ -114,11 +114,9 @@ footer a:hover{text-decoration:underline}
   </section>
 
   <div class="stats">
-    <div class="stat s1"><div class="n" id="k1">63</div><div class="l">Staf yang merekodkan kehadiran lebih awal</div><div class="d up">Peningkatan penyertaan warga kerja</div></div>
-    <div class="stat s2"><div class="n" id="k2">88%</div><div class="l">Kadar ketepatan masa keseluruhan</div><div class="d up">Selepas pelaksanaan program integriti</div></div>
     <div class="stat s4"><div class="n" id="k4">6</div><div class="l">Bahan integriti yang disediakan</div><div class="d flat">Poster, video, aktiviti dan makluman rasmi</div></div>
   </div>
-  <p class="note">Angka di atas merupakan data ringkasan untuk tujuan paparan. Sila kemas kini rekod sebenar sebelum portal ini dikongsi secara rasmi. Nilai boleh diubah pada bahagian <code>STATS</code> dalam fail <code>Index.html</code>.</p>
+  <p class="note">Sebanyak <b>6 bahan integriti telah disediakan</b> untuk menyokong usaha pembudayaan integriti dalam kalangan warga kerja PPST. Bahan tersebut merangkumi poster kesedaran, video penerangan, perkongsian nilai murni, aktiviti kesejahteraan dan makluman rasmi berkaitan tatatertib serta tanggungjawab perkhidmatan.</p>
 
   <div class="sh"><h2>Video pilihan</h2><em>Pilih untuk menonton melalui OneDrive</em></div>
   <div id="feature"></div>
@@ -156,7 +154,7 @@ footer a:hover{text-decoration:underline}
 const ROOT = 'https://umsedumy-my.sharepoint.com/personal/surdin_ums_edu_my/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fsurdin%5Fums%5Fedu%5Fmy%2FDocuments%2F1%2E1%2E%20PPST%2FINTEGRITI%20PPST%202026&viewid=10db4d8a%2D1651%2D498e%2Db9de%2D7374a4ccd7fe&ga=1';
 const VIDEO_URL = 'https://umsedumy-my.sharepoint.com/personal/surdin_ums_edu_my/_layouts/15/stream.aspx?id=%2Fpersonal%2Fsurdin%5Fums%5Fedu%5Fmy%2FDocuments%2F1%2E1%2E%20PPST%2FINTEGRITI%20PPST%202026%2FVIDEO%20INTEGRITY%2FVIDEO%20INTEGRITI%20PPST%20UMS%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ec42f3743%2Dcaa4%2D4255%2Db33d%2D567c8ed23890';
 
-const STATS = { k1: "63", k2: "88%", k4: "6" };
+const STATS = { k4: "6" };
 
 const FILM = { tag:"Video", cls:"t-video", title:"Video Integriti PPST",
   desc:"Video penerangan mengenai kepentingan integriti, tadbir urus dan tanggungjawab warga kerja dalam membentuk perkhidmatan yang berakauntabiliti.",
